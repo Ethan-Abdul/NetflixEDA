@@ -1,7 +1,7 @@
 <h1>Netflix Exploratory Data Analysis (EDA) & Statistical Testing</h1>
 
-<h2>Description</h2>
-
+<h2> 📌 Overview</h2>
+This personal project presents an EDA and statistical testing framework conducted on a Kaggle dataset to evaluate Netflix's global catalogue expansion and release-scheduling tactics. By transforming raw title data into structured, quantitative features, this project investigates how strategic content deployment optimises subscriber engagement.
 <br />
 
 
@@ -15,7 +15,7 @@
   - <b>seaborn</b>
   - <b>scipy</b>
 
-<h2>Program walk-through:</h2>
+<h2></h2>
 
 <p align="center">
 Launch the utility: <br/>
