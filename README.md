@@ -16,12 +16,18 @@ This personal project utilises <b>EDA</b>, <b>Statistical Testing</b>, and exter
 
 <h3>Statistical Testing Verifies if Netflix is:</h3>
 
-- Gradually shifting from standalone feature films to TV shows using a <b>Chi-Square Test of Independence<b/>
+- Gradually shifting from standalone feature films to TV shows
 
-- Centering content releases around the New Year to combat holiday attrition using the <b>One-Way ANOVA<b/>
+- Centering content releases around the New Year to combat holiday attrition
 
-- Attempting to cultivate a more family-oriented viewer base using a <b>Chi-Square Test of Independence<b/>
+- Attempting to cultivate a more family-oriented viewer base
 
+The two inference pipelines implemented in statistical testing are:
+
+1. A <b>Chi-Square Test of Independence</b> with <b>Cramer's V</b>
+2. A <b>One-Way Analysis of Variance (ANOVA)</b>  with <b>Eta-Squared</b> 
+
+Both Chi-Square and One-Way ANOVA return p-values to determine whether there is a significant dependence between variables, with Cramer's V and Eta-Squared, respectively, providing context regarding the effect size of the dependence.
 
 <h2> 🔍 Main Findings</h2>
 <h3>January Front-Loading proves a viable Churn Mitigation Strategy until 2021</h3>
