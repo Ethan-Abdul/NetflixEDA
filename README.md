@@ -1,30 +1,39 @@
 <h1>Netflix Exploratory Data Analysis (EDA) & Statistical Testing</h1>
 
+
 <h2> 📌 Overview</h2>
 This personal project utilises <b>EDA</b>, <b>Statistical Testing</b>, and external research to examine Netflix's catalogue expansion and release-scheduling tactics to drive user engagement and mitigate subscriber churn.
 
-<h3>The EDA process uncovers Netflix's:</h3>
+<h3>EDA Uncovers Netflix's:</h3>
 
 - Favoured content format (movies vs. TV shows)
 
-- Scheduling preferences to mitigate churn
+- Content scheduling preferences to mitigate churn
 
 - Desire to become more globally diverse
 
 - Target audiences over time
 
-<h3>The Statistical Testing process verifies whether Netflix is:</h3>
+<h3>Statistical Testing Verifies if Netflix is:</h3>
 
-- Gradually shifting from standalone feature films to TV shows
+- Gradually shifting from standalone feature films to TV shows using a <b>Chi-Square Test of Independence<b/>
 
-- Centering content releases around the New Year to combat holiday attrition
+- Centering content releases around the New Year to combat holiday attrition using the <b>One-Way ANOVA<b/>
 
-- Attempting to cultivate a more family-oriented viewer base
+- Attempting to cultivate a more family-oriented viewer base using a <b>Chi-Square Test of Independence<b/>
+
 
 <h2> 🔍 Main Findings</h2>
-January Front-Loading as a viable churn mitigation strategy until 2021
+<h3>January Front-Loading proves a viable Churn Mitigation Strategy until 2021</h3>
+
+<p align="center">
+<br />
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/a9614be6-744e-46a2-be18-ebc594dfc2ba" />
+
+</p>
 
 <br />
+
 
 <h2> ⚠️ Disclaimers & Limitations</h2>
 
@@ -34,7 +43,6 @@ January Front-Loading as a viable churn mitigation strategy until 2021
 
 - The research conducted alongside the analysis of this dataset is simply an attempt to ground the findings into reality and not an attempt to prove the findings to be definitively true.
 
-<br />
 
 <h2> 👨🏻‍💻 Languages & Libraries Used</h2>
 
@@ -46,12 +54,9 @@ January Front-Loading as a viable churn mitigation strategy until 2021
 
 - <b>Statistics:</b> pingouin, scipy
 
-<h2></h2>
 
-<p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+<h2> ➡️ Next Steps</h2>
+
 
 <!--
  ```diff
