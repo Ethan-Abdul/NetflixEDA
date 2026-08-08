@@ -39,7 +39,7 @@ Both Chi-Square and One-Way ANOVA return p-values to determine whether there is 
 
 <br />
 
-<h3>2. After a historic mature-audience focus, Netflix has begun catering to all audiences</h3>
+<h3>2. Catering to all audiences after a historic mature-audience focus</h3>
 
 <table>
  <br />
@@ -55,7 +55,20 @@ Both Chi-Square and One-Way ANOVA return p-values to determine whether there is 
 
 <br />
 
-<h3>3. </h3>
+<h3>3. Massive focus on increasing global diversity/inclusivity within the platform</h3>
+
+<p align="center">
+ <br />
+<img width="841" height="547" alt="image" src="https://github.com/user-attachments/assets/5b495ce0-4fba-4e07-b260-71f67c15056d" />
+</p>
+
+<br />
+
+<h3>4. Stat 1</h3>
+
+<br />
+
+<h3>5. Stat 2</h3>
 
 <br />
 
