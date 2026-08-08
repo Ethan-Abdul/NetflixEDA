@@ -30,16 +30,34 @@ The two inference pipelines implemented in statistical testing are:
 Both Chi-Square and One-Way ANOVA return p-values to determine whether there is a significant dependence between variables, with Cramer's V and Eta-Squared, respectively, providing context regarding the effect size of the dependence.
 
 <h2> 🔍 Main Findings</h2>
-<h3>January Front-Loading proves a viable Churn Mitigation Strategy until 2021</h3>
+<h3>1. January Front-Loading proves a viable Churn Mitigation Strategy until 2021</h3>
 
 <p align="center">
 <br />
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/a9614be6-744e-46a2-be18-ebc594dfc2ba" />
-
+<img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/a9614be6-744e-46a2-be18-ebc594dfc2ba" />
 </p>
 
 <br />
 
+<h3>2. After a historic mature-audience focus, Netflix has begun catering to all audiences</h3>
+
+<table>
+ <br />
+  <tr>
+    <td width="50%">
+      <img width="850" height="547" alt="image" src="https://github.com/user-attachments/assets/cdecf8fb-0796-403e-a0aa-be089c1d3642" />
+    </td>
+    <td width="50%">
+      <img width="850" height="547" alt="image" src="https://github.com/user-attachments/assets/ff2cbbf9-4cfb-412d-b7b6-806d83387f6d" />
+    </td>
+  </tr>
+</table>
+
+<br />
+
+<h3>3. </h3>
+
+<br />
 
 <h2> ⚠️ Disclaimers & Limitations</h2>
 
