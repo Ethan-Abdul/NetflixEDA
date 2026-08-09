@@ -7,19 +7,14 @@ This personal project utilises <b>EDA</b>, <b>Statistical Testing</b>, and exter
 <h3>EDA Uncovers Netflix's:</h3>
 
 - Favoured content format (movies vs. TV shows)
-
 - Content scheduling preferences to mitigate churn
-
 - Desire to become more globally diverse
-
 - Target audiences over time
 
 <h3>Statistical Testing Verifies if Netflix is:</h3>
 
 - Gradually shifting from standalone feature films to TV shows
-
 - Centering content releases around the New Year to combat holiday attrition
-
 - Attempting to cultivate a more family-oriented viewer base
 
 The two inference pipelines implemented in statistical testing are:
@@ -29,7 +24,7 @@ The two inference pipelines implemented in statistical testing are:
 
 Both Chi-Square and One-Way ANOVA return p-values to determine whether there is a significant dependence between variables, with Cramer's V and Eta-Squared, respectively, providing context regarding the effect size of the dependence.
 
-<h2> 🔍 Main Findings</h2>
+<h2> 📊 Main Data Findings</h2>
 <h3>1. January Front-Loading proves a viable Churn Mitigation Strategy until 2021</h3>
 
 <p align="center">
@@ -37,9 +32,7 @@ Both Chi-Square and One-Way ANOVA return p-values to determine whether there is 
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/a9614be6-744e-46a2-be18-ebc594dfc2ba" />
 </p>
 
-<br />
-
-<h3>2. Catering to all audiences after a historic mature-audience focus</h3>
+<h3>2. Catering to younger audiences after a historic mature-audience focus</h3>
 
 <table>
  <br />
@@ -53,8 +46,6 @@ Both Chi-Square and One-Way ANOVA return p-values to determine whether there is 
   </tr>
 </table>
 
-<br />
-
 <h3>3. Massive focus on increasing global diversity/inclusivity within the platform</h3>
 
 <p align="center">
@@ -62,15 +53,42 @@ Both Chi-Square and One-Way ANOVA return p-values to determine whether there is 
 <img width="841" height="547" alt="image" src="https://github.com/user-attachments/assets/5b495ce0-4fba-4e07-b260-71f67c15056d" />
 </p>
 
-<br />
+<h2> 🔍 Statistical Findings</h2>
 
-<h3>4. Stat 1</h3>
+<h3>1. 2019 to 2020 US shift from Movies to TV Shows</h3>
 
-<br />
+The first step was creating a contingency table from US content releases across 2019 and 2020:
 
-<h3>5. Stat 2</h3>
+| Release_Year | 2019 | 2020 |
+| --- | --- | --- |
+| Category | | |
+| Movie | 554 | 437 |
+| TV Show | 178 | 241 |
 
-<br />
+Yielding results:
+
+| Chi-Square | dof | $p$-value | crit-region | Cramer's $V$ |
+| --- | --- | --- | --- | --- |
+| 20.71 | 1 | 1e-5 | (3.841, $\infty$) | 0.1212 |
+
+The implications of these results are as follows:
+- There is a significant relationship between the <b>Content Type Release</b> (Movies vs. TV Shows) and <b>Release Year</b> (2019 vs. 2020), as the Chi-Square statistic falls in the critical region and the p-value is less than  (20.71 > 3.841 <=> 1e-5 < 0.05).
+- Cramer's $V$ value is greater than 0.1, ...<br />
+
+<h3>2. Netflix's reliance on high content output to mitigate churn</h3> <br />
+Briefly explain what this test aims to uncover, then table, then implications of results...
+
+| Source | F | $p$-value | Eta-Squared |
+| --- | --- | --- | --- |
+| Volume | 3.898495 | 0.036321 | 0.270757 |
+
+The "Volume" column is split into 'Low', 'Medium', and 'High' output tiers.
+
+<h3>3. </h3> <br />
+
+| Chi-Square | dof | $p$-value | crit-region | Cramer's $V$ |
+| --- | --- | --- | --- | --- |
+| 20.71 | 1 | 1e-5 | (3.841, $\infty$) | 0.1212 |
 
 <h2> ⚠️ Disclaimers & Limitations</h2>
 
