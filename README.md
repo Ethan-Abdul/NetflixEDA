@@ -55,7 +55,12 @@ Both Chi-Square and One-Way ANOVA return p-values to determine whether there is 
 
 <h2> 🔍 Statistical Findings</h2>
 
-<h3>1. 2019 to 2020 US shift from Movies to TV Shows</h3>
+<h3>1. Chi-Square Test of Independence: Netflix's 2019-2020 US Content Shift from Movies to TV Shows</h3>
+The test is defined as follows:
+- $H_0$ (Null Hypothesis): The distribution of catalogue additions in the US by content type (Movies vs. TV Shows) is independent of the release calendar year (2019 vs. 2020).
+- $H_1$ (Alternative Hypothesis): The distribution of catalogue additions in the US by content type is dependent on the release calendar year.
+
+With a significance level $(\alpha)$ of $1 \% \space (\alpha = 0.01)$.
 
 The first step was creating a contingency table from US content releases across 2019 and 2020:
 
@@ -65,26 +70,51 @@ The first step was creating a contingency table from US content releases across 
 | Movie | 554 | 437 |
 | TV Show | 178 | 241 |
 
-Yielding results:
+Statistical Test Output:
 
 | Chi-Square | dof | $p$-value | crit-region | Cramer's $V$ |
 | --- | --- | --- | --- | --- |
-| 20.71 | 1 | 1e-5 | (3.841, $\infty$) | 0.1212 |
+| 20.71 | 1 | 5.3e-6 | $(6.635, \space + \infty)$ | 0.1212 |
 
-The implications of these results are as follows:
-- There is a significant relationship between the <b>Content Type Release</b> (Movies vs. TV Shows) and <b>Release Year</b> (2019 vs. 2020), as the Chi-Square statistic falls in the critical region and the p-value is less than  (20.71 > 3.841 <=> 1e-5 < 0.05).
-- Cramer's $V$ value is greater than 0.1, ...<br />
+Implications:
+- There is a significant relationship between the <b>Content Type</b> (Movies vs. TV Shows) and <b>Release Year</b> (2019 vs. 2020), as the Chi-Square statistic falls comfortably within the critical region ($\chi^2$ > 6.635, $p$ < 0.01).
+- A Cramer's $V$ of 0.1212 indicates a small to moderate effect size ($V$ > 0.10 for $d.f.$ = 1). This confirms that the observed transition to episodic content was a deliberate, non-random shift in catalogue composition. <br />
 
-<h3>2. Netflix's reliance on high content output to mitigate churn</h3> <br />
-Briefly explain what this test aims to uncover, then table, then implications of results...
+<h3>2. One-Way ANOVA: Netflix's reliance on High Content Output to Mitigate Churn</h3>
+The One-Way ANOVA is a statistical test used to determine whether there are statistically significant differences among the means of three or more independent groups. For this analysis, the One-Way ANOVA was conducted to evaluate whether monthly content release volume significantly impacts subscriber churn in the subsequent month.
+
+The One-Way ANOVA test is defined as follows:
+- $H_0$ (Null Hypothesis): The volume of content additions does not affect customer retention. The mean subscriber churn rate is equal across months categorised by low, medium, and high release volumes ($\mu_{Low} = \mu_{Med} = \mu_{High}$).
+- $H_1$ (Alternative Hypothesis): The volume of content additions significantly impacts customer retention. At least one release volume tier results in a distinct mean subscriber churn rate ($\mu_i \ne \mu_j$ for at least one pair of output tiers ($i \ne j$)).
+
+This evaluates whether aggressive catalogue front-loading actively suppresses customer churn during high-attrition periods, or if subscriber retention operates independently of output volume.
+
+DataFrame Sample:
+
+| Volume Tier | Lagged Churn Rate (%) |
+| --- | --- |
+| Medium | 2.20 |
+| Low | 1.95 |
+| Low | 1.88 |
+| Medium | 2.40 |
+| High | 2.42 |
+
+DataFrame Structure & Methodology:
+1. The "Volume Tier" column, which denotes content output for a given month, is split into 'Low', 'Medium', and 'High' groups.
+2. The testing dataframe is in chronological order from December 2018 to December 2020.
+3. A one-month time lag was applied to the churn rate column to align subscriber cancellation with the preceding month's content output. This accounts for decision latency in subscriber behaviour, which directly tests whether prior release activity drives subsequent month-on-month churn.
+
+Statistical Test Output:
 
 | Source | F | $p$-value | Eta-Squared |
 | --- | --- | --- | --- |
-| Volume | 3.898495 | 0.036321 | 0.270757 |
+| Volume Tier | 3.898495 | 0.036321 | 0.270757 |
 
-The "Volume" column is split into 'Low', 'Medium', and 'High' output tiers.
+Implications:
+- there 
 
-<h3>3. </h3> <br />
+<h3>3. Chi-Square Test of Independence: Netflix'sTransition to Family-Centered Cotent</h3>
+kdshjfpanv
 
 | Chi-Square | dof | $p$-value | crit-region | Cramer's $V$ |
 | --- | --- | --- | --- | --- |
