@@ -45,14 +45,14 @@ Both Chi-Square and One-Way ANOVA return p-values to determine whether there is 
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/a9614be6-744e-46a2-be18-ebc594dfc2ba" />
 </p>
 
-<h3>2. The US dominates as the leading region in Netflix releases</h3>
+<h3>2. The US Dominates as the Leading Region in Netflix Releases</h3>
 
 <p align="center">
 <br />
 <img width="859" height="547" alt="image" src="https://github.com/user-attachments/assets/baf7bac7-63a8-4bb8-8133-f3a7baa7c62a" />
 </p>
 
-<h3>3. Catering to younger audiences after a historic mature-audience focus</h3>
+<h3>3. Catering to Younger Audiences after a Historic Mature-Audience Focus</h3>
 
 <table>
  <br />
