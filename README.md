@@ -1,6 +1,7 @@
 <h1>Netflix Exploratory Data Analysis (EDA) & Statistical Testing</h1>
 
 
+
 <h2> 📌 Overview</h2>
 This personal project utilises <b>EDA</b>, <b>Statistical Testing</b>, and external research to examine Netflix's catalogue expansion and release-scheduling tactics to drive user engagement and mitigate subscriber churn.
 
@@ -23,6 +24,18 @@ The two inference pipelines implemented in statistical testing are:
 2. A <b>One-Way Analysis of Variance (ANOVA)</b>  with <b>Eta-Squared</b> 
 
 Both Chi-Square and One-Way ANOVA return p-values to determine whether there is a significant dependence between variables, with Cramer's V and Eta-Squared, respectively, providing context regarding the effect size of the dependence.
+
+
+
+<h2> 👨🏻‍💻 Languages & Libraries Used</h2>
+
+<h3>Python:</h3>
+
+- <b>DataFrame Manipulation:</b> numpy, pandas
+- <b>Visualisation:</b> geopandas, matplotlib, seaborn
+- <b>Statistics:</b> pingouin, scipy
+
+
 
 <h2> 📊 Main Data Findings</h2>
 <h3>1. January Front-Loading proves a viable Churn Mitigation Strategy until 2021</h3>
@@ -53,6 +66,8 @@ Both Chi-Square and One-Way ANOVA return p-values to determine whether there is 
   </tr>
 </table>
 
+
+
 <h2> 🔍 Statistical Findings</h2>
 
 <h3>1. Chi-Square Test of Independence: Netflix's 2019-2020 US Content Shift from Movies to TV Shows</h3>
@@ -80,6 +95,7 @@ Statistical Test Output:
 Implications:
 - There is a significant relationship between the <b>Content Type</b> (Movies vs. TV Shows) and <b>Release Year</b> (2019 vs. 2020), as the Chi-Square statistic falls comfortably within the critical region ($\chi^2$ > 6.635, $p$ < 0.01).
 - A Cramer's $V$ of 0.1212 indicates a small to moderate effect size ($V$ > 0.10 for $d.f.$ = 1). This confirms that the observed transition to episodic content was a deliberate, non-random shift in catalogue composition. <br />
+
 
 <h3>2. One-Way ANOVA: Netflix's reliance on High Content Output to Mitigate Churn</h3>
 
@@ -115,6 +131,7 @@ Statistical Test Output:
 Implications:
 - there 
 
+
 <h3>3. Chi-Square Test of Independence: Netflix'sTransition to Family-Centered Cotent</h3>
 
 kdshjfpanv
@@ -122,6 +139,8 @@ kdshjfpanv
 | Chi-Square | dof | $p$-value | crit-region | Cramer's $V$ |
 | --- | --- | --- | --- | --- |
 | 20.71 | 1 | 1e-5 | (3.841, $\infty$) | 0.1212 |
+
+
 
 <h2> ⚠️ Disclaimers & Limitations</h2>
 
@@ -131,16 +150,6 @@ kdshjfpanv
 
 - The research conducted alongside the analysis of this dataset is simply an attempt to ground the findings into reality and not an attempt to prove the findings to be definitively true.
 
-
-<h2> 👨🏻‍💻 Languages & Libraries Used</h2>
-
-<h3>Python:</h3> 
-
-- <b>DataFrame Manipulation:</b> numpy, pandas 
-
-- <b>Visualisation:</b> geopandas, matplotlib, seaborn
-
-- <b>Statistics:</b> pingouin, scipy
 
 
 <h2> ➡️ Next Steps</h2>
