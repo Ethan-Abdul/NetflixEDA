@@ -5,7 +5,7 @@
 <h2> 📌 Overview</h2>
 This personal project utilises <b>EDA</b>, <b>Statistical Testing</b>, and external research to examine Netflix's catalogue expansion and release-scheduling tactics to drive user engagement and mitigate subscriber churn.
 
-<h3>EDA Uncovers Netflix's:</h3>
+<h3>Exploratory Data Analysis Uncovers Netflix's:</h3>
 
 - Favoured content format (movies vs. TV shows)
 - Content scheduling preferences to mitigate churn
@@ -70,6 +70,8 @@ Both Chi-Square and One-Way ANOVA return p-values to determine whether there is 
 
 <h2> 🔍 Statistical Findings</h2>
 
+Moving on from EDA, rigorous hypothesis testing was executed to evaluate Netflix's content distribution strategy, catalogue composition shifts, and subscriber retention strategies.
+
 <h3>1. Chi-Square Test of Independence: Netflix's 2019-2020 US Content Shift from Movies to TV Shows</h3>
 
 The test is defined as follows:
@@ -78,7 +80,7 @@ The test is defined as follows:
 
 With a significance level $(\alpha)$ of $1 \% \space (\alpha = 0.01)$.
 
-The first step was creating a contingency table from US content releases across 2019 and 2020:
+The first step was creating a contingency table containing US content releases across 2019 and 2020:
 
 | Release_Year | 2019 | 2020 |
 | --- | --- | --- |
@@ -93,7 +95,7 @@ Statistical Test Output:
 | 20.71 | 1 | 5.3e-6 | $(6.635, \space + \infty)$ | 0.1212 |
 
 Implications:
-- There is a significant relationship between the <b>Content Type</b> (Movies vs. TV Shows) and <b>Release Year</b> (2019 vs. 2020), as the Chi-Square statistic falls comfortably within the critical region ($\chi^2$ > 6.635, $p$ < 0.01).
+- The Chi-Square Test of Independence reveals a significant relationship between the <b>Content Type</b> (Movies vs. TV Shows) and <b>Release Year</b> (2019 vs. 2020), as the Chi-Square statistic falls comfortably within the critical region ($\chi^2$ > 6.635, $p$ < 0.01).
 - A Cramer's $V$ of 0.1212 indicates a small to moderate effect size ($V$ > 0.10 for $d.f.$ = 1). This confirms that the observed transition to episodic content was a deliberate, non-random shift in catalogue composition. <br />
 
 
@@ -104,6 +106,8 @@ The One-Way ANOVA is a statistical test used to determine whether there are stat
 The One-Way ANOVA test is defined as follows:
 - $H_0$ (Null Hypothesis): The volume of content additions does not affect customer retention. The mean subscriber churn rate is equal across months categorised by low, medium, and high release volumes ($\mu_{Low} = \mu_{Med} = \mu_{High}$).
 - $H_1$ (Alternative Hypothesis): The volume of content additions significantly impacts customer retention. At least one release volume tier results in a distinct mean subscriber churn rate ($\mu_i \ne \mu_j$ for at least one pair of output tiers ($i \ne j$)).
+
+With a significance level $(\alpha)$ of 5%.
 
 This evaluates whether aggressive catalogue front-loading actively suppresses customer churn during high-attrition periods, or if subscriber retention operates independently of output volume.
 
@@ -118,9 +122,9 @@ DataFrame Sample:
 | High | 2.42 |
 
 DataFrame Structure & Methodology:
-1. The "Volume Tier" column, which denotes content output for a given month, is split into 'Low', 'Medium', and 'High' groups.
-2. The testing dataframe is in chronological order from December 2018 to December 2020.
-3. A one-month time lag was applied to the churn rate column to align subscriber cancellation with the preceding month's content output. This accounts for decision latency in subscriber behaviour, which directly tests whether prior release activity drives subsequent month-on-month churn.
+- The "Volume Tier" column, which denotes content output for a given month, is split into 'Low', 'Medium', and 'High' groups.
+- The testing dataframe is in chronological order from December 2018 to December 2020.
+- A one-month time lag was applied to the churn rate column to align subscriber cancellation with the preceding month's content output. This accounts for decision latency in subscriber behaviour, which directly tests whether prior release activity drives subsequent month-on-month churn.
 
 Statistical Test Output:
 
@@ -129,31 +133,61 @@ Statistical Test Output:
 | Volume Tier | 3.898495 | 0.036321 | 0.270757 |
 
 Implications:
-- there 
+- The ANOVA reveals a statistically significant difference in lagged churn rates across content volume tiers ($F$ = 3.90, $p$ = 0.0363 < 0.05). This formally rejects the null hypothesis that release volume tiers have identical mean churn rates.
+- An Eta-Squared ($\eta^2$) of 0.2708 indicates that 27.1% of the total variance in next-month subscriber churn is directly explained by the preceding month's release volume. In statistical literature, an $\eta^2$ > 0.14 denotes a large effect size, confirming that content volume was a primary operational driver of retention during this timeframe.
+- The empirical relationship between high release volume and suppressed lagged churn confirms that Netflix's 2019-2020 strategy of flooding the platform with content served a clear purpose.
 
 
-<h3>3. Chi-Square Test of Independence: Netflix'sTransition to Family-Centered Cotent</h3>
+<h3>3. Chi-Square Test of Independence: Netflix's Transition to Family-Centered Cotent</h3>
 
-kdshjfpanv
+The test is as follows:
+- $H_0$ (Null Hypothesis): The volume of content releases by maturity rating (Mature vs. Family) is independent of the year of release (2019 vs. 2020).
+- $H_1$ (Alternative Hypothesis): The volume of content releases by maturity rating is dependent on the year of release.
+
+A significance level $(\alpha)$ of $5 \% \space (\alpha = 0.05)$ was chosen for this test.
+
+The first step was creating a contingency table containing mature vs. family-oriented content releases across 2019 and 2020:
+
+| Release_Year | 2019 | 2020 |
+| --- | --- | --- |
+| Content Maturity | | |
+| Family | 458 | 502 |
+| Mature | 794 | 713 |
+
+Note: This 
+
+Statistical Test Output:
 
 | Chi-Square | dof | $p$-value | crit-region | Cramer's $V$ |
 | --- | --- | --- | --- | --- |
-| 20.71 | 1 | 1e-5 | (3.841, $\infty$) | 0.1212 |
+| 5.62 | 1 | 0.0177645 | (3.841, $\infty$) | 0.0477 |
 
-
+Implications:
+- The Chi-Square Test of Independence reveals a significant relationship between <b>Content Maturity Rating</b> (Family vs. Mature) and <b>Release Year</b> (2019 vs. 2020), as the Chi-Square statistic falls comfortably within the critical region ($\chi^2$ > 3.841, $p$ < 0.05).
+- Despite reaching statistical significance, Cramer's $V$ yields an effect size of 0.0477. Falling short of the 0.10 threshold for a small effect, this indicates an exceptionally weak relationship strength.
+- While the rating realignments between 2019 and 2020 are statistically detectable, their practical business impact on audience targeting was negligible.
 
 <h2> ⚠️ Disclaimers & Limitations</h2>
 
 - This dataset was sourced from Kaggle and may not be fully representative of Netflix's true catalogue.
-
 - The data may not be fully up to date, reflecting Netflix's catalogue at the time of collection and/or releases from a specific region/regions.
-
 - The research conducted alongside the analysis of this dataset is simply an attempt to ground the findings into reality and not an attempt to prove the findings to be definitively true.
 
 
 
-<h2> ➡️ Next Steps</h2>
+<h2> 🧐 Future Analysis Considerations</h2>
 
+1. Time-Series Forecasting (ARIMA/SARIMAX)
+
+To move beyond retrospective descriptive analysis, future iterations could implement predictive time-series modelling to capture complex quarterly seasonality and non-linear trends in subscriber acquisition and churn.
+- Building Autoregressive Integrated Moving Average (ARIMA) and Seasonal ARIMA with exogenous variables (SARIMAX) models that integrate external operational indicators, such as competitor release schedules, subscription price adjustments, and macroeconomic metrics.
+- Enables precise forecasting of how seasonal content front-loading directly impacts net subscriber additions, offering predictive foresight into the ROI of aggressive release schedules rather than relying on historical hindsight (Hyndman and Athanasopoulos, 2021).
+
+2. Natural Language Processing (NLP)
+
+Relying solely on broad categorical metadata (such as "Drama" or "Comedy") obscures subtle thematic shifts in catalogue composition. Applying text-mining algorithms to title synopses unlocks deeper thematic intelligence across the library.
+- Ingesting synopsis text using Latent Dirichlet Allocation (LDA) or Bidirectional Encoder Representations from Transformers (BERT) to extract high-frequency keywords, topic clusters, and semantic weights over time.
+- Evaluates whether Netflix strategically pivots towards specific psychological hooks (e.g. "dystopian", "nostalgia", "true-crime investigation") during periods of socio-economic stress, measuring audience relevance without requiring proprietary viewing metrics.
 
 <!--
  ```diff
