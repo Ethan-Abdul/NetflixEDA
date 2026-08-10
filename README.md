@@ -56,6 +56,7 @@ Both Chi-Square and One-Way ANOVA return p-values to determine whether there is 
 <h2> 🔍 Statistical Findings</h2>
 
 <h3>1. Chi-Square Test of Independence: Netflix's 2019-2020 US Content Shift from Movies to TV Shows</h3>
+
 The test is defined as follows:
 - $H_0$ (Null Hypothesis): The distribution of catalogue additions in the US by content type (Movies vs. TV Shows) is independent of the release calendar year (2019 vs. 2020).
 - $H_1$ (Alternative Hypothesis): The distribution of catalogue additions in the US by content type is dependent on the release calendar year.
@@ -81,6 +82,7 @@ Implications:
 - A Cramer's $V$ of 0.1212 indicates a small to moderate effect size ($V$ > 0.10 for $d.f.$ = 1). This confirms that the observed transition to episodic content was a deliberate, non-random shift in catalogue composition. <br />
 
 <h3>2. One-Way ANOVA: Netflix's reliance on High Content Output to Mitigate Churn</h3>
+
 The One-Way ANOVA is a statistical test used to determine whether there are statistically significant differences among the means of three or more independent groups. For this analysis, the One-Way ANOVA was conducted to evaluate whether monthly content release volume significantly impacts subscriber churn in the subsequent month.
 
 The One-Way ANOVA test is defined as follows:
@@ -114,6 +116,7 @@ Implications:
 - there 
 
 <h3>3. Chi-Square Test of Independence: Netflix'sTransition to Family-Centered Cotent</h3>
+
 kdshjfpanv
 
 | Chi-Square | dof | $p$-value | crit-region | Cramer's $V$ |
